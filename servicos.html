@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Serviços · Dra. Ana Beatriz Moreira</title>
+  <meta name="description" content="Serviços psiquiátricos: avaliação diagnóstica, psicofarmacoterapia, prescrição de receitas e telemedicina." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-hero { background: var(--color-bg); padding: 100px 48px 64px; text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: -50%; left: -20%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(233,239,233,0.8) 0%, transparent 70%); border-radius: 50%; z-index: 0; }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .page-hero h1 { font-family: var(--font-serif); font-size: 3.2rem; color: var(--color-primary); margin-bottom: 16px; font-weight: 500; }
+    .page-hero h1 span { color: var(--color-accent); font-weight: 400; }
+    .page-hero p { color: var(--color-text-muted); font-size: 1.05rem; max-width: 600px; margin: 0 auto; font-weight: 300; line-height: 1.8; }
+
+    .service-block { padding: 100px 48px; border-bottom: 1px solid var(--color-border); }
+    .service-block:nth-child(even) { background: var(--color-bg); }
+    .service-block:nth-child(odd) { background: #fff; }
+    .service-block-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .service-block-inner.reverse { direction: rtl; }
+    .service-block-inner.reverse > * { direction: ltr; }
+    .service-block-content h2 { font-family: var(--font-serif); font-size: 2.4rem; color: var(--color-primary); margin-bottom: 24px; font-weight: 500; }
+    .service-block-content h2 span { color: var(--color-accent); font-weight: 400; }
+    .service-block-content p { color: var(--color-text); font-size: 1rem; line-height: 1.8; margin-bottom: 24px; font-weight: 300; }
+    .service-block-content ul { margin: 32px 0; }
+    .service-block-content ul li { color: var(--color-text); font-size: 0.95rem; font-weight: 300; padding: 8px 0; display: flex; align-items: flex-start; gap: 12px; }
+    .service-block-content ul li::before { content: '✓'; color: var(--color-accent); flex-shrink: 0; font-weight: 500; }
+
+    .service-visual { background: var(--color-bg-card); border-radius: var(--radius); padding: 48px; border: 1px solid var(--color-border); box-shadow: var(--shadow); display: flex; flex-direction: column; gap: 20px; }
+    .sv-stat { display: flex; align-items: center; gap: 16px; }
+    .sv-stat-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--color-primary-light); display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.2rem; flex-shrink: 0; }
+    .sv-stat-text strong { display: block; font-size: 0.95rem; color: var(--color-primary); font-weight: 500; margin-bottom: 2px; }
+    .sv-stat-text span { font-size: 0.85rem; color: var(--color-text-muted); font-weight: 300; }
+
+    .payment-section { background: #fff; padding: 100px 48px; }
+    .payment-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .payment-inner h2 { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 500; margin-bottom: 16px; color: var(--color-primary); }
+    .payment-inner h2 span { color: var(--color-accent); font-weight: 400; }
+    .alerts-wrap { max-width: 700px; margin: 0 auto 48px; text-align: left; }
+
+    @media (max-width: 900px) {
+      .page-hero { padding: 64px 24px 48px; } .page-hero h1 { font-size: 2.4rem; }
+      .service-block { padding: 64px 24px; } .service-block-inner { grid-template-columns: 1fr; gap: 48px; }
+      .service-block-inner.reverse { direction: ltr; }
+      .payment-section { padding: 64px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Dra. Ana <span>Beatriz</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="servicos.html" class="active">Serviços</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="contato.html" class="btn-agendar">Agendar</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Serviços <span>Médicos</span></h1>
+    <p>Avaliação, diagnóstico e tratamento de transtornos mentais. Prescrições controladas e acompanhamento clínico contínuo para estabilidade.</p>
+  </div>
+</div>
+
+<!-- Avaliação Diagnóstica -->
+<section class="service-block">
+  <div class="service-block-inner">
+    <div class="service-block-content fade-in">
+      <h2>Manejo e <span>Avaliação Clínica</span></h2>
+      <p>A consulta psiquiátrica tem o propósito central de avaliar os sintomas dentro do histórico de vida e familiar do paciente. Com base em critérios diagnósticos (DSM-5 e CID-11), mapeamos a real necessidade de intervenção biológica.</p>
+      <ul>
+        <li>Transtorno Depressivo Maior (TDM) e Distimia</li>
+        <li>Transtornos de Ansiedade Generalizada (TAG), Pânico e Fobias</li>
+        <li>Transtorno do Déficit de Atenção com Hiperatividade (TDAH) em adultos</li>
+        <li>Transtorno Afetivo Bipolar (TAB) e Ciclotimia</li>
+        <li>Insônia Crônica e qualidade do sono</li>
+      </ul>
+      <a href="contato.html" class="btn btn-primary" style="margin-top:16px;">Agendar Avaliação</a>
+    </div>
+    <div class="service-visual fade-in">
+      <div class="sv-stat">
+        <div class="sv-stat-icon">🕒</div>
+        <div class="sv-stat-text">
+          <strong>Sessões de 60 minutos</strong>
+          <span>Avaliação minuciosa sem pressa</span>
+        </div>
+      </div>
+      <div class="sv-stat">
+        <div class="sv-stat-icon">📄</div>
+        <div class="sv-stat-text">
+          <strong>Relatório Médico</strong>
+          <span>Atestados e laudos conclusivos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tratamento Farmacológico e Prescrição -->
+<section class="service-block">
+  <div class="service-block-inner reverse">
+    <div class="service-block-content fade-in">
+      <h2>Prescrição e <span>Medicamentos</span></h2>
+      <p>Nosso pilar ético é a prescrição racional. Indicamos psicofármacos (antidepressivos, estabilizadores de humor, ansiolíticos ou psicoestimulantes) estritamente quando o biológico necessita de amparo químico para recuperar seu funcionamento.</p>
+      <ul>
+        <li>Emissão de receitas controladas (Amarelas, Azuis, Brancas especiais)</li>
+        <li>Estratégias de redução (desmame farmacológico seguro)</li>
+        <li>Avaliação de efeitos colaterais e ajustes de posologia</li>
+        <li>Interação medicamentosa sob rigoroso monitoramento</li>
+      </ul>
+      <a href="contato.html" class="btn btn-primary" style="margin-top:16px;">Saber Mais</a>
+    </div>
+    <div class="service-visual fade-in">
+      <div class="sv-stat">
+        <div class="sv-stat-icon">💊</div>
+        <div class="sv-stat-text">
+          <strong>Psicofarmacologia Otimizada</strong>
+          <span>Dose mínima efetiva para maior tolerância</span>
+        </div>
+      </div>
+      <div class="sv-stat">
+        <div class="sv-stat-icon">🔐</div>
+        <div class="sv-stat-text">
+          <strong>Receituários Eletrônicos</strong>
+          <span>Assinatura digital válida em todo Brasil</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- payment -->
+<section class="payment-section">
+  <div class="payment-inner">
+    <h2>Política de <span>Atendimento</span></h2>
+    <div class="divider"></div>
+    <div class="alerts-wrap fade-in">
+      <div class="alert-box alert-info">
+        <strong>Atendimento Particular (Reembolso)</strong>
+        Atuamos de maneira particular visando garantir disponibilidade e duração de consulta condizentes com o padrão humanizado. Fornecemos nota fiscal completa e laudos discriminados para solicitação de reembolso prévia junto ao seu plano de saúde.
+      </div>
+      <div class="alert-box alert-warning">
+        <strong>Retornos e Ajuste de Dose</strong>
+        Para garantia da sua adaptação, o processo inclui um alinhamento direto após o início das medicações para acompanhamento das primeiras semanas. Esse suporte é essencial no início da psicofarmacologia.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Dra. Ana <span>Beatriz</span></div>
+      <p>Médica Psiquiatra focada no acolhimento, no diagnóstico preciso e no cuidado clínico da saúde mental. Um espaço seguro livre de preconceitos.</p>
+      <div class="footer-socials">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">A Médica</a>
+      <a href="servicos.html">Tratamentos</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Dra. Ana Beatriz Moreira · CRM/SP 187432 - RQE 9872. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

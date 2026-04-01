@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato · Dra. Ana Beatriz Moreira</title>
+  <meta name="description" content="Entre em contato com o ambulatório psiquiátrico da Dra. Ana Beatriz para agendamentos." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .page-hero { background: var(--color-bg); padding: 100px 48px 64px; text-align: center; position: relative; overflow: hidden; }
+    .page-hero::before { content: ''; position: absolute; top: 0; left: 80%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(233,239,233,0.8) 0%, transparent 70%); border-radius: 50%; z-index: 0; }
+    .page-hero-inner { position: relative; z-index: 1; }
+    .page-hero h1 { font-family: var(--font-serif); font-size: 3.2rem; color: var(--color-primary); margin-bottom: 16px; font-weight: 500; }
+    .page-hero p { color: var(--color-text-muted); max-width: 520px; font-size: 1.05rem; font-weight: 300; margin: 0 auto; line-height: 1.8; }
+
+    .contact-section { padding: 100px 48px; background: #fff; }
+    .contact-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px; align-items: start; }
+
+    .contact-info h2 { font-family: var(--font-serif); font-weight: 500; font-size: 2.6rem; margin-bottom: 24px; color: var(--color-primary); }
+    .contact-info h2 span { font-weight: 400; color: var(--color-accent); }
+    .contact-info p { color: var(--color-text-muted); font-size: 1rem; font-weight: 300; line-height: 1.8; margin-bottom: 40px; }
+    .info-links { display: flex; flex-direction: column; gap: 16px; }
+    .info-link {
+      display: flex; align-items: center; gap: 20px; padding: 24px;
+      border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-bg);
+      transition: all var(--transition); text-decoration: none; color: var(--color-text);
+    }
+    .info-link:hover { transform: translateY(-3px); box-shadow: var(--shadow); border-color: var(--color-accent); }
+    .info-link-icon { width: 48px; height: 48px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; color: var(--color-primary); font-size: 1.2rem; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .info-link-text strong { display: block; font-size: 0.95rem; font-weight: 500; color: var(--color-primary); margin-bottom: 4px; }
+    .info-link-text span { font-size: 0.9rem; font-weight: 300; color: var(--color-text-muted); }
+
+    .contact-form-wrap { background: var(--color-bg); padding: 48px; border-radius: var(--radius); border: 1px solid var(--color-border); }
+    .contact-form-wrap h2 { font-family: var(--font-serif); font-weight: 500; font-size: 2rem; margin-bottom: 32px; color: var(--color-primary); }
+    .contact-form-wrap h2 span { font-weight: 400; color: var(--color-accent); }
+    .form-group { margin-bottom: 24px; }
+    .form-label { display: block; font-size: 0.85rem; font-weight: 400; color: var(--color-primary); margin-bottom: 8px; }
+    .form-input, .form-select, .form-textarea {
+      width: 100%; border: 1px solid var(--color-border); border-radius: var(--radius-sm); padding: 14px 16px;
+      font-family: var(--font-sans); font-size: 0.95rem; font-weight: 300; color: var(--color-text);
+      background: #fff; transition: border-color var(--transition); outline: none; appearance: none;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--color-primary); }
+    .form-textarea { resize: vertical; min-height: 140px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .form-submit { width: 100%; justify-content: center; }
+    #contactSuccess { display: none; margin-top: 24px; }
+
+    @media (max-width: 900px) {
+      .page-hero { padding: 64px 24px; } .page-hero h1 { font-size: 2.4rem; }
+      .contact-section { padding: 64px 24px; } .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+      .contact-form-wrap { padding: 32px 24px; }
+      .form-row { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Dra. Ana <span>Beatriz</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="servicos.html">Serviços</a></li>
+    <li><a href="contato.html" class="active">Contato</a></li>
+    <li><a href="contato.html" class="btn-agendar">Agendar</a></li>
+  </ul>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <h1>Horário de <span>Consulta</span></h1>
+    <p>Agende sua avaliação psiquiátrica diretamente ou contate nossa equipe de agendamento em caso de dúvidas sobre emissão de receitas e retornos.</p>
+  </div>
+</div>
+
+<section class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-info fade-in">
+      <h2>Fale <span>conosco</span></h2>
+      <p>Nossa equipe entrará em contato para alinhar formato (presencial em SP ou telemedicina para todo o país) e orientações sobre prescrição médica inicial.</p>
+      <div class="info-links">
+        <a href="https://wa.me/5511999887766" target="_blank" rel="noopener" class="info-link">
+          <div class="info-link-text">
+            <strong>WhatsApp / Agendamento</strong>
+            <span>(11) 99988-7766</span>
+          </div>
+        </a>
+        <a href="mailto:contato@draanabeatriz.com.br" class="info-link">
+          <div class="info-link-text">
+            <strong>E-mail</strong>
+            <span>contato@draanabeatriz.com.br</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-form-wrap fade-in">
+      <h2>Agendar <span>Avaliação</span></h2>
+      <form id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="contactName">Nome do Paciente</label>
+            <input class="form-input" type="text" id="contactName" placeholder="Nome completo" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="contactPhone">Telefone</label>
+            <input class="form-input" type="tel" id="contactPhone" placeholder="Celular/WhatsApp" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="contactEmail">E-mail</label>
+          <input class="form-input" type="email" id="contactEmail" placeholder="Para envio de notas e receitas digitais" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="contactType">Modalidade Médica</label>
+          <select class="form-select" id="contactType" required>
+            <option value="" disabled selected>Selecione um método</option>
+            <option value="presencial">Consulta Psiquiátrica Presencial (SP)</option>
+            <option value="teleconsulta">Telemedicina Psiquiátrica Online</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="contactMessage">Deseja descrever o motivo clínico?</label>
+          <textarea class="form-textarea" id="contactMessage" placeholder="Breve relato sobre sua piora clínica ou motivos para buscar ajuda (Sintomas, medicações anteriores)..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary form-submit">Enviar Solicitação Médica</button>
+      </form>
+      <div id="contactSuccess" class="alert-box alert-info">
+        <strong>Pré-agendamento Recebido.</strong>
+        Nossa recepção psiquiátrica entrará em contato em poucas horas para confirmar seu horário.
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Dra. Ana <span>Beatriz</span></div>
+      <p>Médica Psiquiatra focada no acolhimento, no diagnóstico preciso e no cuidado clínico da saúde mental. Um espaço seguro livre de preconceitos.</p>
+      <div class="footer-socials">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">A Médica</a>
+      <a href="servicos.html">Tratamentos</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Dra. Ana Beatriz Moreira · CRM/SP 187432 - RQE 9872. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const type = document.getElementById('contactType').value;
+    if (!name || !email || !type) {
+      alert('Por favor, preencha os campos obrigatórios.');
+      return;
+    }
+    this.style.display = 'none';
+    document.getElementById('contactSuccess').style.display = 'block';
+  });
+</script>
+</body>
+</html>

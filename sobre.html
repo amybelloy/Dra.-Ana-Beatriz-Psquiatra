@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre · Dra. Ana Beatriz Moreira</title>
+  <meta name="description" content="Conheça a trajetória, residência médica e a visão da Dra. Ana Beatriz Moreira sobre a Psiquiatria." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .about-hero { padding: 100px 48px; background: var(--color-bg); position: relative; overflow: hidden; }
+    .about-hero::before { content: ''; position: absolute; top: 0; left: -10%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(233,239,233,0.8) 0%, transparent 70%); border-radius: 50%; z-index: 0; }
+    .about-hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: auto 1fr; gap: 80px; align-items: center; position: relative; z-index: 1; }
+    .about-photo { width: 380px; height: 480px; border-radius: 20px; overflow: hidden; box-shadow: var(--shadow); border: 8px solid #fff; }
+    .about-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+    .about-content h1 { font-family: var(--font-serif); font-size: 3.2rem; font-weight: 500; color: var(--color-primary); margin-bottom: 24px; line-height: 1.1; }
+    .about-content h1 span { color: var(--color-accent); font-weight: 400; }
+    .about-tag { color: var(--color-text-muted); background: var(--color-primary-light); padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px; display: inline-block; }
+    .about-content p { color: var(--color-text); font-size: 1rem; line-height: 1.8; margin-bottom: 24px; font-weight: 300; }
+    .about-content p strong { font-weight: 400; color: var(--color-primary); }
+
+    .formation-section { background: #fff; padding: 100px 48px; }
+    .formation-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .formation-inner h2 { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 500; color: var(--color-primary); margin-bottom: 16px; }
+    .formation-inner h2 span { color: var(--color-accent); font-weight: 400; }
+    .formation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-top: 64px; }
+    
+    .patients-section { padding: 100px 48px; background: var(--color-bg); }
+    .patients-inner { max-width: 1100px; margin: 0 auto; text-align: center; }
+    .patients-inner h2 { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 500; color: var(--color-primary); margin-bottom: 16px; }
+    .patients-inner h2 span { color: var(--color-accent); font-weight: 400; }
+    .patients-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-top: 64px; text-align: left; }
+    .patient-card h3 { color: var(--color-primary); font-size: 1.2rem; font-weight: 500; font-family: var(--font-serif); margin-bottom: 12px; }
+
+    @media (max-width: 900px) {
+      .about-hero { padding: 48px 24px; } .about-hero-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; }
+      .about-photo { width: 100%; height: auto; aspect-ratio: 3/4; margin: 0 auto; } .about-content h1 { font-size: 2.6rem; }
+      .formation-section { padding: 64px 24px; } .formation-grid { grid-template-columns: 1fr; }
+      .patients-section { padding: 64px 24px; } .patients-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Dra. Ana <span>Beatriz</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Início</a></li>
+    <li><a href="sobre.html" class="active">Sobre</a></li>
+    <li><a href="servicos.html">Serviços</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="contato.html" class="btn-agendar">Agendar</a></li>
+  </ul>
+</nav>
+
+<section class="about-hero">
+  <div class="about-hero-inner">
+    <div class="about-photo fade-in">
+      <img src="foto-dra.png" alt="Dra. Ana Beatriz Moreira" />
+    </div>
+    <div class="about-content fade-in">
+      <span class="about-tag">MÉDICA PSIQUIATRA · CRM/SP 187432 · RQE 9872</span>
+      <h1>Sobre a <br><span>Psiquiatra</span></h1>
+      <p>A Psiquiatria para mim não é sobre sedar sentimentos, mas sim sobre restabelecer funções biológicas para que o paciente consiga enxergar a vida sem as lentes turvas da dor ou da hiperatividade incessante.</p>
+      <p>Com mais de <strong>+1.200 pacientes atendidos</strong> em todo o Brasil (presencial e online), acredito no cuidado centrado na pessoa, utilizando a ciência médica para amparar, diagnosticar e prescrever sempre o menor número de fármacos necessários para recriar as bases do equilíbrio cerebral.</p>
+    </div>
+  </div>
+</section>
+
+<div class="formation-section">
+  <div class="formation-inner">
+    <h2>Trajetória e <span>Medicina</span></h2>
+    <div class="divider"></div>
+    <div class="formation-grid">
+      <div class="card fade-in">
+        <div class="card-icon">🎓</div>
+        <div class="card-title">Graduação de Medicina</div>
+        <p class="card-text">Universidade de São Paulo (USP) - FMUSP. Seis anos imersivos em medicina de alta complexidade técnica.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">🏥</div>
+        <div class="card-title">Residência Médica</div>
+        <p class="card-text">Residência em Psiquiatria pela Universidade Federal de São Paulo (UNIFESP). Três anos dedicados integralmente a casos agudos e ambulatório clínico.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">🌟</div>
+        <div class="card-title">Registro Especialista</div>
+        <p class="card-text">Título de especialista reconhecido pela ABP e RQE (Registro de Qualificação de Especialista), garantindo máxima ética, domínio clínico e atualização científica contínua.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Dra. Ana <span>Beatriz</span></div>
+      <p>Médica Psiquiatra focada no acolhimento, no diagnóstico preciso e no cuidado clínico da saúde mental. Um espaço seguro livre de preconceitos.</p>
+      <div class="footer-socials">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">A Médica</a>
+      <a href="servicos.html">Tratamentos</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Dra. Ana Beatriz Moreira · CRM/SP 187432 - RQE 9872. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

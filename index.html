@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dra. Ana Beatriz Moreira · Médica Psiquiatra</title>
+  <meta name="description" content="Médica Psiquiatra especializada em diagnósticos clínicos e tratamento farmacológico. Atendimento humanizado presencial em São Paulo e teleconsulta." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .hero { min-height: calc(100vh - 80px); display: flex; align-items: center; padding: 0 48px; position: relative; overflow: hidden; background: var(--color-bg); }
+    .hero::before { content: ''; position: absolute; top: -20%; right: -10%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(233,239,233,0.8) 0%, transparent 70%); border-radius: 50%; z-index: 0; }
+    .hero::after { content: ''; position: absolute; bottom: -20%; left: -10%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(233,239,233,0.8) 0%, transparent 70%); border-radius: 50%; z-index: 0; }
+    .hero-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 64px; align-items: center; position: relative; z-index: 1; width: 100%; }
+    .hero-tag { display: inline-flex; align-items: center; background: var(--color-primary-light); color: var(--color-text-muted); padding: 6px 16px; border-radius: 50px; font-size: 0.75rem; font-weight: 400; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px; }
+    .hero-title { font-family: var(--font-serif); font-size: 4rem; font-weight: 500; line-height: 1.1; color: var(--color-primary); margin-bottom: 24px; }
+    .hero-title span { color: var(--color-accent); font-weight: 400; }
+    .hero-desc { color: var(--color-text-muted); font-size: 1.05rem; font-weight: 300; line-height: 1.7; margin-bottom: 40px; max-width: 480px; }
+    .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero-image-wrap { position: relative; display: flex; justify-content: flex-end; }
+    .hero-image-frame { width: 440px; height: 440px; border-radius: 50%; overflow: hidden; border: 8px solid #fff; box-shadow: 0 20px 60px rgba(50, 87, 70, 0.15); }
+    .hero-image-frame img { width: 100%; height: 100%; object-fit: cover; object-position: top center; filter: contrast(1.05); }
+
+    .about-strip { background: transparent; padding: 40px 48px; border-top: 1px solid var(--color-border); }
+    .about-strip-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 48px; text-align: center; color: var(--color-primary); }
+    .strip-item h3 { font-family: var(--font-serif); font-size: 1.4rem; font-weight: 500; margin-bottom: 8px; }
+    .strip-item p { color: var(--color-text-muted); font-size: 0.9rem; font-weight: 300; line-height: 1.6; }
+
+    .services-section { background: #FFFFFF; }
+    
+    .cta-banner { background: var(--color-primary-light); padding: 100px 48px; text-align: center; color: var(--color-primary); border-top: 1px solid var(--color-border); }
+    .cta-banner-inner { max-width: 600px; margin: 0 auto; }
+    .cta-banner .stars { font-size: 1.4rem; display: block; margin-bottom: 16px; letter-spacing: 4px; color: var(--color-accent); }
+    .cta-stars-count { color: var(--color-text-muted); font-size: 0.85rem; font-weight: 300; margin-bottom: 32px; display: block; }
+    .cta-banner h2 { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 500; margin-bottom: 16px; }
+    .cta-banner h2 span { font-weight: 400; color: var(--color-accent); }
+    .cta-banner p { color: var(--color-text); font-size: 1rem; font-weight: 300; line-height: 1.8; margin-bottom: 40px; }
+
+    @media (max-width: 900px) {
+      .hero { padding: 48px 24px; min-height: auto; } .hero-inner { grid-template-columns: 1fr; gap: 48px; text-align: center; } .hero-title { font-size: 3rem; }
+      .hero-image-wrap { order: -1; justify-content: center; } .hero-image-frame { width: 300px; height: 300px; border-width: 4px; }
+      .hero-actions { justify-content: center; } .hero-desc { margin-left: auto; margin-right: auto; }
+      .about-strip { padding: 48px 24px; } .about-strip-inner { grid-template-columns: 1fr; gap: 32px; }
+      .cta-banner { padding: 64px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <a href="index.html" class="nav-logo">Dra. Ana <span>Beatriz</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Início</a></li>
+    <li><a href="sobre.html">Sobre</a></li>
+    <li><a href="servicos.html">Serviços</a></li>
+    <li><a href="contato.html">Contato</a></li>
+    <li><a href="contato.html" class="btn-agendar">Agendar</a></li>
+  </ul>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content fade-in">
+      <div class="hero-tag">MÉDICA PSIQUIATRA · CRM/SP 187432 - RQE 9872</div>
+      <h1 class="hero-title">Dra. Ana<br><span>Beatriz</span></h1>
+      <p class="hero-desc">
+        Médica Psiquiatra com foco em diagnóstico clínico humanizado e preciso. Tratamento médico seguro para restabelecer a sua autonomia e saúde emocional.
+      </p>
+      <div class="hero-actions">
+        <a href="contato.html" class="btn btn-primary">Agendar Consulta</a>
+        <a href="sobre.html" class="btn btn-outline">Saiba Mais</a>
+      </div>
+    </div>
+    <div class="hero-image-wrap fade-in">
+      <div class="hero-image-frame">
+        <img src="foto-dra.png" alt="Dra. Ana Beatriz Moreira - Psiquiatra" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="about-strip">
+  <div class="about-strip-inner">
+    <div class="strip-item">
+      <h3>Residência</h3>
+      <p>Psiquiatria (UNIFESP)</p>
+    </div>
+    <div class="strip-item">
+      <h3>Medicina</h3>
+      <p>Graduada pela USP</p>
+    </div>
+    <div class="strip-item">
+      <h3>Abordagem</h3>
+      <p>Clínica Integrada</p>
+    </div>
+  </div>
+</div>
+
+<section class="section section-center services-section">
+  <h2 class="section-title">Para que serve a <span>Psiquiatria?</span></h2>
+  <div class="divider"></div>
+  <p class="section-subtitle">
+    A psiquiatria é a especialidade médica dedicada ao diagnóstico, tratamento e prevenção dos transtornos mentais, emocionais e comportamentais. Buscar a ajuda de um psiquiatra é o primeiro passo para encontrar alívio da sobrecarga química e restabelecer sua qualidade de vida.
+  </p>
+  
+  <div class="grid-2" style="text-align: left; margin-top: 48px;">
+    <div class="card fade-in">
+      <div class="card-icon">🧠</div>
+      <div class="card-title">Quando e por que buscar ajuda?</div>
+      <p class="card-text">
+        Se as tristezas se prolongam, a insônia se torna crônica, sua mente não desliga por conta da ansiedade, ou há dificuldades extremas de concentração, seu cérebro pode estar pedindo suporte. O psiquiatra atua exatamente no reequilíbrio dos neurotransmissores para que você viva com clareza.
+      </p>
+    </div>
+    <div class="card fade-in">
+      <div class="card-icon">🩺</div>
+      <div class="card-title">Diagnósticos Clínicos</div>
+      <p class="card-text">
+        Entender a origem do que você sente é libertador. O diagnóstico não é um rótulo, mas uma bússola. Avaliamos clinicamente condições como Depressão, Transtorno Bipolar, Ansiedade, TDAH, entre outros, aprimorando seu progresso contínuo e bem-estar em conjunto com acompanhamento de outros terapeutas.
+      </p>
+    </div>
+  </div>
+  <div style="margin-top:48px;">
+    <a href="servicos.html" class="btn btn-outline">Ver serviços médicos</a>
+  </div>
+</section>
+
+<div class="cta-banner fade-in">
+  <div class="cta-banner-inner">
+    <span class="stars">★★★★★</span>
+    <span class="cta-stars-count">+1200 pacientes atendidos</span>
+    <h2>Agende sua <span>consulta</span></h2>
+    <p>Cuide da química e biologia das suas emoções. Atendimento online seguro para todo o Brasil e presencial em São Paulo.</p>
+    <a href="contato.html" class="btn btn-primary">Agendar agora</a>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Dra. Ana <span>Beatriz</span></div>
+      <p>Médica Psiquiatra focada no acolhimento, no diagnóstico preciso e no cuidado clínico da saúde mental. Um espaço seguro livre de preconceitos.</p>
+      <div class="footer-socials">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">WhatsApp</a>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="index.html">Início</a>
+      <a href="sobre.html">A Médica</a>
+      <a href="servicos.html">Tratamentos</a>
+      <a href="contato.html">Contato</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Dra. Ana Beatriz Moreira · CRM/SP 187432 - RQE 9872. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
